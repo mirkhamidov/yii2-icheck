@@ -46,9 +46,9 @@ class ICheck extends InputWidget
             $this->color = 'futurico';
         }
         $this->color = ($this->color != 'black') ? $this->color : 'minimal';
-        $this->options += [
+        $this->options = array_merge($this->options, [
             'class' => 'i-checks-'.$this->id
-        ];
+        ]);
         $this->idItem = $this->options['id'];
     }
 
